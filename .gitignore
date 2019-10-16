@@ -10,3 +10,24 @@
 
 # Output of the go coverage tool, specifically when used with LiteIDE
 *.out
+
+# any ssh keys and certificates
+*.pem
+*.key
+*.ppk
+
+# tokens
+*.token
+
+# our custom go binary
+*.bin
+bin
+
+# exlude shell scripts
+*.sh
+
+# test and prod json
+*.test.json
+*.prod.json
+
+log*
