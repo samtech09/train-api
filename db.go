@@ -71,6 +71,16 @@ func getByIDFromDB(id int) (models.Item, error) {
 	return u, nil
 }
 
+func saveItem(itm models.Item) error {
+	sql := "insert into items(Title, Price) values($1, $2);"
+
+	_, err := _pdb.Exec(sql, itm.Title, itm.Price)
+	if err != nil {
+		return err
+	}
+	return nil
+}
+
 // func getRecordsFromDB() ([]student, error) {
 // 	sql := "select roll, name, count(*) over as cnt from students"
 
